@@ -1,0 +1,83 @@
+<div class="search">
+  <div>
+    <h1>Images</h1>
+    <hr />
+  </div>
+  <div class="btn_style">
+    <div>
+      <button class="button1" mat-raised-button (click)="openDialog()" style="background-color: black; color: white;">
+        <i class="fa fa-plus" aria-hidden="true" style="margin: 4px;"></i>Add
+        Images
+      </button>
+    </div>
+    <div>
+      <button class="cropped" mat-raised-button (click)="openCropped()" style="background-color: black; color: white;">
+        <i class="fa fa-plus" aria-hidden="true" style="margin: 4px;"></i>Add
+        cropped Image
+      </button>
+    </div>
+  </div>
+
+</div>
+<!-- <div class="search1" *ngFor="let item of photo">
+  <div class="image">
+    <img src="http://localhost:3000/uploads/{{ item.image }}" alt="" />
+    <span class="button2"><i class="fa fa-times" aria-hidden="true" (click)="onDelete(item)"></i>
+    </span>
+  </div>
+</div> -->
+<div class="search">
+  <table class="custom-table">
+    <thead>
+      <tr class="sepration">
+        <th colspan="1">Id</th>
+        <th colspan="1">Image</th>
+        <th colspan="1">Owner name</th>
+        <th colspan="1">Approval</th>
+        <!-- <th colspan="1">Make album image</th> -->
+        <th colspan="1">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of photo">
+        <td colspan="1">{{ item.id }}</td>
+        <td colspan="1">
+          <a [routerLink]="['/dashboard/displayImage', item.id]"><img
+              src="http://localhost:3000/uploads/gfg-{{ item.image }}" alt="" style="width: 20px; height: 20px" /></a>
+        </td>
+        <td colspan="1">
+          {{item.owner_name}}
+        </td>
+        <td colspan="1">
+          <input type="checkbox" name="checkbox" [(ngModel)]="item.approval" style="width: 15px; height: 15px;"
+            (change)="onCheckboxChange(item.id,item.approval)">
+        </td>
+        <td colspan="1">
+          <i class="fa fa-crop" aria-hidden="true" (click)="cropImage(item.id)"></i>
+          <i class="fas fa-trash" style="padding: 5px; color: red;" (click)="onDelete(item.id)"></i>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<div id="myDiv" [ngStyle]="{ display: isVisible ? 'block' : 'none' }">
+  <div>
+    <h2>Upload Images</h2>
+    <form (ngSubmit)="onSubmit()" #imageForm="ngForm">
+      <input type="file" accept="image/*" (change)="onFileSelected($event)" multiple />
+      <button type="submit" [disabled]="!selectedFiles">Upload</button>
+    </form>
+  </div>
+  <div *ngIf="selectedFiles" class="search1">
+    <h3>Selected Images:</h3>
+    <div *ngFor="let file of selectedFiles" class="search1">
+      <div class="image-preview" class="image">
+        <img [src]="getImageUrl(file)" alt="{{ file.name }}" />
+        <p>{{ file.name }}</p>
+      </div>
+    </div>
+  </div>
+</div>
+<mat-paginator [length]="100" [pageSize]="10" [pageSizeOptions]="[5, 10, 25, 100]" aria-label="Select page"
+  style="background-color: whitesmoke;">
+</mat-paginator>

@@ -1,0 +1,93 @@
+<!-- <div class="container" style="justify-content: space-between">
+  <div class="child1">
+    <div class="subchild1" style="height: 20vh; background-color: black; color: white">
+      <i class="fas fa-sign-out-alt" style="font-size: 24px; transform: rotate(180deg)" (click)="logout()"></i>
+    </div>
+
+    <div class="subchild2" style="height: 20vh; background-color: black; color: white">
+      <div class="last">
+        <ul class="">
+          <li class="setting" (click)="setting()">
+            <i class="fas fa-lock" aria-hidden="true" style="text-align: center; font-size: 24px"></i>
+          </li>
+          <li class="setting" (click)="setting()">
+            <i class="fa fa-cog" aria-hidden="true" style="text-align: center; font-size: 24px"></i>
+          </li>
+          <li class="setting" (click)="setting()">
+            <i class="fa fa-share-alt" aria-hidden="true" style="text-align: center; font-size: 24px"></i>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="child2">
+    <div class="subchild1">
+      <div>
+        <h2>CollaboAlbum</h2>
+        <hr />
+      </div>
+    </div>
+
+    <div class="subchild2">
+      <ul>
+        <li>
+          <a [routerLink]="['/home']"><i class="fa fa-camera-retro" style="font-size: 12px; color: black"></i>
+            Albums</a>
+        </li>
+        <li>
+          <a (click)="setting()"><i class="fa fa-file-archive" style="font-size: 12px; color: black"></i>
+            My Albums</a>
+        </li>
+        <li>
+          <a (click)="gotoShared()"><i class="fa fa-share-alt" style="font-size: 12px; color: black"></i>
+            Shared Albums</a>
+        </li>
+        <li>
+          <a [routerLink]="['/permisson']"><i class="fa fa-solid fa-building-shield"
+              style="font-size: 12px; color: black"></i>
+            Permission</a>
+        </li>
+
+      </ul>
+    </div>
+  </div>
+  <div class="child3">
+    <div class="navbar">
+      <div></div>
+      <div><i class="far fa-user-circle" style="font-size: 24px"></i></div>
+    </div>
+    
+  </div>
+</div> -->
+<div class="search">
+  <div>
+    <h1>Permissions</h1>
+    <hr />
+  </div>
+  <div></div>
+</div>
+<div class="search">
+  <table class="custom-table">
+    <thead class="thead_style">
+      <tr class="sepration">
+        <th colspan="1">Id</th>
+        <th colspan="1">Album name</th>
+        <th colspan="1">User Name</th>
+        <th colspan="1">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of data">
+        <td colspan="1">{{ item.id }}</td>
+        <td colspan="1">
+          {{ item.Album.title }}
+        </td>
+        <td colspan="1">{{ item.User.username }}</td>
+        <td colspan="1">
+          <i class="fa fa-check" style="color: green" (click)="grant(item.album_shared_with.id,item.id)"></i>
+          <i class="fa fa-times" style="margin-left: 5px; color: red" (click)="deletePer(item.id)"></i>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

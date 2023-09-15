@@ -1,0 +1,13 @@
+<div style="margin: 20px;">
+  <h1>Upload image</h1>
+
+  <ngx-dropzone (change)="onSelect($event)">
+    <ngx-dropzone-label>Drop your image here</ngx-dropzone-label>
+    <ngx-dropzone-image-preview ngProjectAs="ngx-dropzone-preview" *ngFor="let f of files" [file]="f">
+      <ngx-dropzone-label>{{ f.name }} ({{ f.type }})</ngx-dropzone-label>
+    </ngx-dropzone-image-preview>
+  </ngx-dropzone>
+
+  <button (click)="uploadImages()" class="login-btn" style="margin: 10px;">Add Images</button>
+
+</div>

@@ -1,0 +1,3 @@
+exports.permission = (req, res) => {
+
+}

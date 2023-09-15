@@ -1,0 +1,134 @@
+<!-- <section class="">
+  <div class="row" style="border: 1px solid red;">
+    <div class="login-left">
+      <div class="main-logo">
+        <a href="#">
+          <h1 style="margin-bottom: 0px;">CollaboAlbum</h1>
+          <hr style="height: 0rem; background-color: black; width: 13rem; float: left;">
+        </a>
+      </div>
+      <form class="sign-in" id="demoForm" [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+        <div class="text-center">
+          <h1>Sign Up</h1>
+          <h3>Sign up your account below</h3>
+        </div>
+        <div class="form-control">
+          <label for="username">Username<small style="color: red;"> *</small></label>
+          <input formControlName="username" chars-nos type="username" id="username" />
+          <small *ngIf="signupForm.get('username')?.invalid && submitted">
+            <small *ngIf="signupForm.get('username')?.errors?.['required']">
+              <small class="red">username required.</small>
+            </small>
+            <small *ngIf="!signupForm.get('email')?.errors?.['required'] && signupForm.get('email')?.errors?.['email']">
+              <small class="red">The email must be a valid email address.</small>
+            </small>
+          </small>
+        </div>
+
+        <div class="form-control">
+          <label for="email">Email<small style="color: red;"> *</small></label>
+          <input formControlName="email" chars-nos type="email" id="email" />
+          <small
+            *ngIf="signupForm.get('email')?.invalid && submitted &&signupForm.get('email')?.errors?.['required'] && signupForm.get('email')?.touched">
+            <small *ngIf="signupForm.get('email')?.errors?.['required']">
+              <small class="red">The email field is required.</small>
+            </small>
+            <small *ngIf="!signupForm.get('email')?.errors?.['required'] && signupForm.get('email')?.errors?.['email']">
+              <small class="red">The email must be a valid email address.</small>
+            </small>
+          </small>
+        </div>
+        <div class="form-control2">
+          <p>
+            <label for="name">Password<small style="color: red;"> *</small></label>
+            <input formControlName="password" chars-nos id="name" />
+
+            <small *ngIf="signupForm.get('password')?.invalid && submitted">
+              <small *ngIf="signupForm.get('password')?.errors?.['required']">
+                <small class="red">The password field is required.</small>
+              </small>
+            </small>
+          </p>
+        </div>
+
+        <div class="link">
+          <small>have an account ?</small>
+          <a [routerLink]="['/login']" style="text-decoration: none; margin-left: 5px; color: red;">Login</a>
+          <br>
+
+
+        </div>
+        <div class="button-div">
+          <button type="submit" class="button" [disabled]="!signupForm.valid">Login</button>
+        </div>
+      
+      </form>
+    </div>
+    <div class="login-right">
+      <img src="../../../../../assets/album3.jpg" style="width: 100%; height: 100%;" alt="Login image">
+    </div>
+  </div>
+</section> -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Login Template</title>
+  <link href="https://fonts.googleapis.com/css?family=Karla:400,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.materialdesignicons.com/4.8.95/css/materialdesignicons.min.css" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" />
+</head>
+
+<body>
+  <main>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-6 login-section-wrapper">
+          <div class="brand-wrapper">
+            <!-- <img src="assets/images/logo.svg" alt="logo" class="logo"> -->
+            <h1 class="login-title"><img src="../../../../../assets/album4.png" alt="logo" class="logo">
+              Collabo Album</h1>
+          </div>
+          <div class="login-wrapper my-auto">
+            <h1 class="login-title">Sign Up</h1>
+            <form [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+              <div class="form-group">
+                <label for="username">Username</label>
+                <input type="email" name="username" id="username" class="form-control" placeholder="Demon Salvator"
+                  formControlName="username" />
+              </div>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" class="form-control" placeholder="email@example.com"
+                  formControlName="email" />
+              </div>
+              <div class="form-group mb-4">
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password" class="form-control"
+                  placeholder="enter your passsword" formControlName="password" />
+              </div>
+              <button class="btn btn-block login-btn login-title" [disabled]="!signupForm.valid">Sign Up</button>
+              <!-- <button type="submit" class="button" [disabled]="!loginForm.valid">Sign in </button>
+              {{loginForm.valid}} -->
+            </form>
+            <p class="login-wrapper-footer-text">
+              have an account?
+              <a [routerLink]="['/login']" class="text-reset">Login</a>
+            </p>
+          </div>
+        </div>
+        <div class="col-sm-6 px-0 d-none d-sm-block">
+          <img src="../../../../../assets/album3.jpg" alt="login image" class="login-img" />
+        </div>
+      </div>
+    </div>
+  </main>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</body>
+
+</html>

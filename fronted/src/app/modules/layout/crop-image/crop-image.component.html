@@ -1,0 +1,29 @@
+<div>
+  <div class="flex items-center justify-between">
+    <label for="image" class="block text-sm font-medium leading-6 text-gray-900">Select your Image</label>
+
+  </div>
+  <div style="width: 30%; height: 30%;">
+    <button class="login-btn" (click)="onImage()">Submit</button>
+
+    <input id="image" name="image" type="file" required #image="ngModel" ngModel (change)="onImageChange($event)"
+      (change)="fileChangeEvent($event)"
+      class="block w-full rounded-md border-0 px-3 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:outline-none focus:ring-inset focus:ring-rose-600 sm:text-sm sm:leading-6" />
+  </div>
+  <span *ngIf="image.touched && image.invalid" class="text-rose-500">*Please select your image</span>
+  <span *ngIf="fileList && fileList.length > 0">Crop Image</span>
+  <div style="display: flex; margin: 50px;">
+    <div class="img">
+      <image-cropper [imageChangedEvent]="imageChangedEvent" [maintainAspectRatio]="true" [aspectRatio]="4 / 3"
+        format="png" (imageCropped)="imageCropped($event)"></image-cropper>
+    </div>
+    <div>
+      <img *ngIf="fileList && fileList.length > 0" [src]="croppedImage"
+        style="width: 200px ; height: 200px; margin-left: 100px;" />
+      <span *ngIf="fileList && fileList.length > 0">Preview Image</span>
+
+    </div>
+
+  </div>
+
+</div>

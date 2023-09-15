@@ -1,0 +1,35 @@
+<div class="search">
+  <div>
+    <h1>Albums</h1>
+    <hr />
+  </div>
+  <div>
+    <input type="text" name="" id="" placeholder="Search the album" (input)="onInputChange($event)" />
+  </div>
+
+</div>
+
+<div class="search">
+  <table class="custom-table">
+    <thead class="thead_style">
+      <tr class="sepration">
+        <th colspan="2">Id</th>
+        <th colspan="2">Album name</th>
+        <!-- <th colspan="2">Share</th> -->
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of data">
+        <td colspan="2">{{ item.id }}</td>
+        <td colspan="2">
+          <a [routerLink]="['/dashboard/image', item.id]">{{ item.title }}</a>
+        </td>
+
+        <!-- <td colspan="2"><i class="fas fa-share" style="color: green;"></i></td> -->
+      </tr>
+    </tbody>
+  </table>
+</div>
+<!-- <mat-paginator [length]="100" [pageSize]="10" [pageSizeOptions]="[5, 10, 25, 100]" aria-label="Select page"
+  style="background-color: whitesmoke;">
+</mat-paginator> -->

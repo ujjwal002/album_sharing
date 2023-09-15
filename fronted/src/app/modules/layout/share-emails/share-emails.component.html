@@ -1,0 +1,57 @@
+<div id="myDiv">
+  <fieldset>
+    <legend>Send email</legend>
+    <form [formGroup]="emailForm" (ngSubmit)="onSubmit()">
+      <div>
+        <label for="email">Email:</label>
+        <input type="email" id="email" formControlName="email">
+      </div>
+
+      <br>
+      <div style="display: flex; justify-content: flex-start; margin: 10px;">
+        <input type="checkbox" id="permission" formControlName="permission"
+          style="margin: 0; width: 20px; height: 20px; ">
+        <label for="permission" style="margin-left: 5px;">Permission:</label>
+      </div>
+      <button type="submit" style="background-color: black; color: white; padding: 5px;">Submit</button>
+      <small> <mat-spinner *ngIf="isLoading" style="width: 20px; height: 20px;"></mat-spinner>
+      </small>
+
+
+    </form>
+  </fieldset>
+</div>
+
+<!-- <div style="margin: 85px;">
+  <h1>Add emails</h1>
+  <form class="example-form" [formGroup]="emailForm" class="example-form" (ngSubmit)="onSubmit()">
+    <mat-form-field class="example-full-width" style="width: 100%;">
+      <mat-label>Email</mat-label>
+      <input type="email" matInput formControlName="email" placeholder="Ex. pat@example.com"
+        (keydown.enter)="addEmail()" />
+      <mat-hint>Errors appear instantly!</mat-hint>
+      <mat-error *ngIf="emailForm.hasError('email') && !emailForm.hasError('required')">
+        Please enter a valid email address
+      </mat-error>
+      <mat-error *ngIf="emailForm.hasError('required')">
+        Email is <strong>required</strong>
+      </mat-error>
+    </mat-form-field>
+    <div style="display: flex; justify-content: flex-start; margin: 10px;">
+      <input type="checkbox" id="permission" formControlName="permission"
+        style="margin: 0; width: 20px; height: 20px; ">
+      <label for="permission" style="margin-left: 5px;">Permission:</label>
+    </div>
+
+
+    <div class="email-list">
+      <mat-chip *ngFor="let email of emails; let index = index" [removable]="true" (removed)="removeEmail(index)">
+        {{ email }}
+        <mat-icon matChipRemove>cancel</mat-icon>
+      </mat-chip>
+    </div>
+
+    <button mat-raised-button (click)="addEmail()" [disabled]="!emailForm.valid">Add Email</button> -->
+<!-- <button mat-raised-button [disabled]="emails.length === 0">Submit</button>
+</form>
+</div> -->

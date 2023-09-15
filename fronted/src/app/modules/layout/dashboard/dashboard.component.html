@@ -1,0 +1,40 @@
+<div class="container">
+  <div class="child2">
+    <div class="subchild1">
+      <div>
+        <h2 style="font-size: 20px; ">CollaboAlbum</h2>
+        <hr />
+      </div>
+    </div>
+    <div class="subchild2">
+      <ul>
+        <li>
+          <a [routerLink]="['/dashboard/home']"><i class="fa fa-camera-retro" style="font-size: 20px; "></i>
+            <small style="font-size: 15px; ">Albums</small></a>
+        </li>
+        <li>
+          <a (click)="setting()"><i class="fa fa-file-archive" style="font-size: 20px;"></i>
+            <small style="font-size: 15px; ">My Albums</small></a>
+        </li>
+        <li>
+          <a (click)="gotoShared()"><i class="fa fa-share-alt" style="font-size: 20px; "></i>
+            <small style="font-size: 15px; ">Shared Albums</small></a>
+        </li>
+        <li>
+          <a [routerLink]="['/dashboard/permisson']"><i class="fa fa-solid fa-building-shield"
+              style="font-size: 20px;"></i>
+            <small style="font-size: 15px; ">Permission</small></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="child3">
+    <div class="navbar">
+      <div><i class="far fa-user-circle" style="font-size: 24px"></i></div>
+      <div style="margin-left: 10px;"><i class="fas fa-sign-out-alt" style="font-size: 24px; transform: rotate(180deg)"
+          (click)="logout()"></i>
+      </div>
+    </div>
+    <router-outlet></router-outlet>
+  </div>
+</div>

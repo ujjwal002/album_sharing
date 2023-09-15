@@ -1,0 +1,95 @@
+<!-- <div class="container" style="justify-content: space-between">
+  <div class="child1">
+    <div class="subchild1" style="height: 20vh; background-color: black; color: white">
+      <i class="fas fa-sign-out-alt" style="font-size: 24px; transform: rotate(180deg)" (click)="logout()"></i>
+    </div>
+
+    <div class="subchild2" style="height: 20vh; background-color: black; color: white">
+      <div class="last">
+        <ul class="">
+          <li class="setting">
+            <i class="fa fa-cog" aria-hidden="true" style="text-align: center; font-size: 24px"></i>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="child2">
+    <div class="subchild1">
+      <div>
+        <h2>CollaboAlbum</h2>
+        <hr />
+      </div>
+    </div>
+
+    <div class="subchild2">
+      <ul>
+        <li>
+          <a href=""><i class="fa fa-image" style="font-size: 12px; color: black"></i>
+            Albums</a>
+        </li>
+        <li>
+          <a href=""><i class="fa fa-image" style="font-size: 12px; color: black"></i>
+            Albums</a>
+        </li>
+        <li>
+          <a href=""><i class="fa fa-image" style="font-size: 12px; color: black"></i>
+            Albums</a>
+        </li>
+        <li>
+          <a href=""><i class="fa fa-image" style="font-size: 12px; color: black"></i>
+            Albums</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="child3">
+    <div class="navbar">
+      <div></div>
+      <div><i class="far fa-user-circle" style="font-size: 24px"></i></div>
+    </div>
+    <div class="search">
+      <div>
+        <h1>Images</h1>
+        <hr />
+      </div>
+
+    </div>
+    <div style=" height: 65vh; overflow-y: scroll;">
+      <div class="search1" *ngFor="let item of photo" style="margin: 20px; ">
+        <mat-card class="example-card">
+          <mat-card-header>
+            <p>{{item.Album.title}}</p>
+          </mat-card-header>
+          <img mat-card-image src="http://localhost:3000/uploads/{{ item.image }}" alt="Photo of a Shiba Inu"
+            style="margin: 10px; width: 170px; height: 200px;">
+
+        </mat-card>
+      </div>
+    </div>
+
+  </div>
+</div> -->
+<div class="search">
+  <div>
+    <h2>Images</h2>
+
+    <hr />
+  </div>
+  <!-- <div><input type="text" name="" id="" placeholder="Search the album"></div> -->
+
+</div>
+<div style=" height: 65vh; overflow-y: scroll;">
+  <div class="search1" *ngFor="let item of photo" style="margin: 20px; ">
+    <mat-card class="example-card">
+      <mat-card-header>
+        <p>{{item.Album.title}}</p>
+        <br>
+        <p>{{item.owner_name}}</p>
+      </mat-card-header>
+      <img mat-card-image src="http://localhost:3000/uploads/{{ item.image }}" alt="Photo of a Shiba Inu"
+        style="margin: 10px; width: 170px; height: 200px;">
+
+    </mat-card>
+  </div>
+</div>

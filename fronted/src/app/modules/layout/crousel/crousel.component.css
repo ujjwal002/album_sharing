@@ -1,0 +1,80 @@
+h3 {
+  padding: 20px;
+  text-align: center;
+}
+
+ngx-carousel .ngxcarouselPointDefault {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+ngx-carousel .ngxcarouselPoint li {
+  transform: scale(1);
+  float: left;
+  width: 30%;
+}
+
+ngx-carousel .NgxCarouselItem {
+  display: block;
+  box-sizing: border-box;
+}
+
+ngx-carousel button {
+  border: none;
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  width: 50px;
+  height: 50px;
+  border-radius: 999%;
+  margin: auto;
+  padding: 20px;
+  margin-left: 10px;
+  opacity: 0.8;
+}
+
+ngx-carousel button[NgxCarouselPrev] {
+  left: 50px;
+}
+ngx-carousel button[NgxCarouselNext] {
+  right: 50px;
+}
+
+ngb-carousel {
+  max-width: 700px;
+  margin: 50px auto;
+}
+ngb-carousel img {
+  width: 100%;
+  outline: none;
+}
+ngb-carousel {
+  width: inherit;
+  height: inherit;
+}
+.carousel-inner {
+  overflow: visible;
+}
+.carousel-item {
+  display: flex !important;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 1.2s ease-in-out, visibility 1.2s;
+  z-index: -1;
+}
+.carousel-item.active {
+  opacity: 1;
+  visibility: visible;
+  z-index: 10;
+}
+.carousel-control-prev {
+  z-index: 20;
+}
+
+.carousel-control-next {
+  z-index: 20;
+}
+.carousel-indicators {
+  z-index: 20;
+}

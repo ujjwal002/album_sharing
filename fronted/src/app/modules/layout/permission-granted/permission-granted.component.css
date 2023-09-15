@@ -1,0 +1,230 @@
+.container {
+  height: 100vh;
+  width: 100%;
+  background-color: black;
+  color: white;
+  display: flex;
+}
+.thead_style {
+  border-left: 10px solid black;
+  border-top-left-radius: 5px;
+}
+.child1 {
+  width: 5%;
+  background-color: black;
+  color: white;
+  box-shadow: 5px 10px #888888;
+}
+.child2 {
+  width: 10%;
+  background-color: white;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  /* box-shadow: 0px 0px 0px rgba(255, 255, 255, 0.1); */
+}
+h2 {
+  font-size: 1.1rem;
+  font-weight: 400;
+  line-height: 1rem;
+  font-family: Roboto, sans-serif;
+  letter-spacing: normal;
+  margin: 0 0 0px;
+}
+hr {
+  color: black;
+}
+.child3 {
+  width: 85%;
+  background-color: white;
+  color: black;
+}
+.subchild1 {
+  height: 20vh;
+  background-color: white;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.subchild2 {
+  height: 80vh;
+  background-color: white;
+  color: black;
+  display: flex;
+  /* justify-content: center; */
+  /* align-items: center; */
+}
+ul {
+  display: flex;
+  width: 100%;
+  /* margin: auto; */
+  padding: 0px;
+  flex-direction: column;
+  text-align: center;
+  /* justify-content: center; */
+}
+li {
+  list-style: none;
+  margin: 5px;
+  padding: 10px;
+}
+li a {
+  text-decoration: none;
+  color: black;
+}
+li:hover {
+  background-color: whitesmoke;
+  /* width: 100%; */
+  border-radius: 5px;
+  cursor: pointer;
+}
+.last {
+  text-align: center;
+  position: absolute;
+  left: 1%;
+  bottom: 0%;
+}
+.child3 {
+  background-color: whitesmoke;
+}
+.setting:hover {
+  background-color: black;
+  cursor: pointer;
+}
+.navbar {
+  display: flex;
+  height: 73px;
+  background-color: white;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 50px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+}
+.navbar_li {
+  display: flex;
+}
+.search {
+  display: flex;
+  margin: 50px;
+  justify-content: space-between;
+}
+.button1 {
+  background-color: black;
+  color: white;
+  padding: 10px;
+  width: 133px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+h1 {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 32px;
+  font-family: Roboto, sans-serif;
+  letter-spacing: normal;
+  margin: 0px 0 0px;
+}
+.custom-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.sepration {
+  margin: 10px;
+  background-color: white;
+}
+.thead_style {
+  border-top: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+}
+.tbody_style {
+  border: 1px solid #ccc;
+  margin-top: 5px;
+  width: 90%;
+}
+
+.custom-table th {
+  text-align: center;
+  padding: 10px;
+  background-color: #f2f2f2;
+}
+
+.custom-table td {
+  text-align: center;
+  padding: 8px;
+  border-top: 1px solid #ccc;
+}
+/* .bla {
+  width: 100%;
+  height: 50px;
+  border: 1px solid #ccc;
+  background-color: black;
+} */
+
+.custom-table th[colspan="3"] {
+  width: calc(100% / 3);
+}
+i:hover {
+  cursor: pointer;
+}
+.example-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+.pagination {
+  display: flex;
+  background-color: white;
+  height: 40.8px;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid black;
+  margin: 50px;
+  border-left: 10px solid black;
+}
+.sub_pagination {
+  display: inline-block;
+  border: 1px solid black;
+  margin: 5px;
+  padding: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  /* background-color: black;
+  color: white; */
+}
+.sub_pagination:hover {
+  cursor: pointer;
+}
+.active {
+  background-color: black;
+  color: white;
+}
+/* .even-row {
+  background-color: white;
+}
+
+.odd-row {
+  background-color: whitesmoke;
+} */
+/* .even-row:hover {
+  background-color: whitesmoke;
+}
+
+.odd-row:hover {
+  background-color: white;
+} */
+.row_change:hover {
+  background-color: white;
+}
+
+.ul {
+  display: flex;
+}
+
+@media (max-width: 768px) {
+  .custom-table th[colspan="3"] {
+    width: 100%;
+  }
+}

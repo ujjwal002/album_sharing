@@ -1,0 +1,106 @@
+<!-- <div class="container" style="justify-content: space-between">
+  <div class="child1">
+    <div class="subchild1" style="height: 20vh; background-color: black; color: white">
+      <i class="fas fa-sign-out-alt" style="font-size: 24px; transform: rotate(180deg)" (click)="logout()"></i>
+    </div>
+
+    <div class="subchild2" style="height: 20vh; background-color: black; color: white">
+      <div class="last">
+        <ul class="">
+          <li class="setting" (click)="setting()">
+            <i class='fas fa-lock' aria-hidden="true" style="text-align: center; font-size: 24px"></i>
+          </li>
+          <li class="setting" (click)="setting()">
+            <i class="fa fa-cog" aria-hidden="true" style="text-align: center; font-size: 24px"></i>
+          </li>
+          <li class="setting">
+            <i class="fa fa-share-alt" aria-hidden="true" style="text-align: center; font-size: 24px"></i>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="child2">
+    <div class="subchild1">
+      <div>
+        <h2>CollaboAlbum</h2>
+        <hr />
+      </div>
+    </div>
+
+    <div class="subchild2">
+      <ul>
+        <li>
+          <a [routerLink]="['/home']"><i class="fa fa-camera-retro" style="font-size: 12px; color: black"></i>
+            Albums</a>
+        </li>
+        <li>
+          <a (click)="setting()"><i class="fa fa-file-archive" style="font-size: 12px; color: black"></i>
+            My Albums</a>
+        </li>
+        <li>
+          <a (click)="gotoShared()"><i class="fa fa-share-alt" style="font-size: 12px; color: black"></i>
+            Shared Albums</a>
+        </li>
+        <li>
+          <a [routerLink]="['/permisson']"><i class="fa fa-solid fa-building-shield"
+              style="font-size: 12px; color: black"></i>
+            Permission</a>
+        </li>
+
+      </ul>
+    </div>
+  </div>
+  <div class="child3">
+    <div class="navbar">
+      <div></div>
+      <div><i class="far fa-user-circle" style="font-size: 24px"></i></div>
+    </div>
+
+
+    <div class="search" style=" align-items: center; justify-content: center;">
+
+      <mat-card class="example-card">
+        <mat-card-header>
+          <div mat-card-avatar class="example-header-image"></div>
+          <mat-card-title>{{album.title}}</mat-card-title>
+          <mat-card-subtitle>{{owner_name}}</mat-card-subtitle>
+        </mat-card-header>
+        <img mat-card-image src="http://localhost:3000/uploads/{{ data }}" alt="Photo of a Shiba Inu"
+          style="width: 380px; height: 300px; margin: 10px;">
+        <mat-card-content>
+          <p>
+
+          </p>
+        </mat-card-content>
+        <mat-card-actions>
+
+        </mat-card-actions>
+      </mat-card>
+
+    </div>
+
+  </div>
+
+</div> -->
+<div class="search" style=" align-items: center; justify-content: center;">
+
+  <mat-card class="example-card">
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title>{{album.title}}</mat-card-title>
+      <mat-card-subtitle>{{owner_name}}</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image src="http://localhost:3000/uploads/{{ data }}" alt="Photo of a Shiba Inu"
+      style="width: 380px; height: 300px; margin: 10px;">
+    <mat-card-content>
+      <p>
+
+      </p>
+    </mat-card-content>
+    <mat-card-actions>
+
+    </mat-card-actions>
+  </mat-card>
+
+</div>

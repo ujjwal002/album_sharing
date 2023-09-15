@@ -1,0 +1,46 @@
+<div class="search">
+  <div>
+    <h1>My Albums</h1>
+    <hr />
+  </div>
+  <div>
+    <input type="text" name="" id="" placeholder="Search the album" (input)="onInputChange($event)" />
+  </div>
+  <div>
+    <button class="button1" mat-raised-button (click)="openDialog()" style="background-color: black; color: white;">
+      <i class="fa fa-plus" aria-hidden="true" style="margin: 4px"></i>Add
+      Album
+    </button>
+  </div>
+</div>
+<div class="search">
+  <table class="custom-table">
+    <thead class="thead_style">
+      <tr class="sepration">
+        <th colspan="2">Id</th>
+        <th colspan="2">Album name</th>
+        <th colspan="2">Action</th>
+        <th colspan="2">Share</th>
+      </tr>
+    </thead>
+    <tbody class="tbody_style">
+      <tr *ngFor="let item of dataa paginate: { itemsPerPage: count, currentPage: p }">
+        <td colspan="2">{{ item.id }}</td>
+        <td colspan="2">
+          <a [routerLink]="['/dashboard/imageSetting', item.id]">{{ item.title }}</a>
+        </td>
+        <td colspan="2">
+          <i class="fas fa-edit" style="padding: 5px" (click)="onEdit(item.id)"></i>
+          <i class="fas fa-trash" style="padding: 5px; color: red;" (click)="onDelete(item.id)"></i>
+
+
+        </td>
+        <td colspan="2"><i class="fa fa-share" style="color: green;" mat-raised-button
+            (click)="toggleVisibility(item.id)"></i>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <br>
+
+</div>
